@@ -174,22 +174,6 @@ Table of Contents
 
 [7.1.13. PathFile](#pathfile)
 
-[7.2. Expression Function Format Example](#_Toc107328765)
-
-[7.2.1. int Example](#_Toc107328766)
-
-[7.2.2. double Example](#_Toc107328767)
-
-[7.2.3. DateTime Example](#_Toc107328768)
-
-[7.2.4. Align Example](#_Toc107328769)
-
-[7.3. Q / A](#_Toc107328770)
-
-[7.4. Wizard Example](#_Toc107328771)
-
-[7.5. Wizard Example](#_Toc107328772)
-
 # FileSheeter
 
 ## Overview
@@ -1904,11 +1888,9 @@ Indicates the kind of criteria that determines if a record belongs to this recor
 
 Select one of the following types. Contains, StartsWith, EndsWith, Enclosed, Substring, LineLength, LineNumber, Formula.
 
-In the case of Formula, compose a logical expression[^8] that evaluates to true or false[^9].
+In the case of Formula, compose a logical expression that evaluates to true or false[^8]. For more details, refer to Criteria Language Syntax.
 
-[^8]: Appendix의 Expression Operators, Functions and Constant참조
-
-[^9]: Boolean expressions evaluate to either true or false.
+[^8]: Boolean expressions evaluate to either true or false.
 
 If the type is equal to LineLength, you must enter the number of character values that you want to compare to the length of a record in the flat file you are parsing. The number of character values is different according to the selected encodings. For example, you should enter the number of bytes when processing Asian characters.
 
@@ -1944,9 +1926,9 @@ You can use the Record Popup Window to add field definitions.
 
 Require at least one more field to be present. The length of a record in a file must equal the sum of the length of all fields.
 
-\-**Name**[^10]:
+\-**Name**[^9]:
 
-[^10]: No all special characters are permitted except for the underscore ('_').
+[^9]: No all special characters are permitted except for the underscore ('_').
 
 Used as an identifier and isn’t duplicated in the record.
 
@@ -2104,9 +2086,9 @@ The records can contain more or less chars in the last field
 
 **5. Delimited Record Group**
 
-**-Delimiter Type**[^11]
+**-Delimiter Type**[^10]
 
-[^11]: If Delimiter Type is equals to None, Output jobs erase all delimiters anvd write only values like FixedLength.
+[^10]: If Delimiter Type is equals to None, Output jobs erase all delimiters and write only values like FixedLength.
 
 Indicates a delimiter character that separates the record into fields. Select one of the following types.
 
@@ -2232,9 +2214,9 @@ The minimum number of items that the array must contain in sequence.
 
 The maximum number of items that the array must contain in sequence.
 
-**-HasNewLine**[^12]
+**-HasNewLine**[^11]
 
-[^12]: FieldInNewLine
+[^11]: FieldInNewLine
 
 Indicates the field has a new line before this value i.e. indicates that the records have multiple lines, and this field is at the beginning of a line.
 
@@ -2248,23 +2230,23 @@ ErrorExceptString
 
 Indicates that the field of which field type is a string can contain an empty string value. But the field of which field type is not a string cannot contain an empty string value.
 
-ErrorIfEmpty[^13]
+ErrorIfEmpty[^12]
 
-[^13]: FieldNotEmpty
+[^12]: FieldNotEmpty
 
 Indicates that the field cannot contain an empty string value. This attribute is used for the reading.
 
-SpecifiedIfEmpty[^14]
+SpecifiedIfEmpty[^13]
 
-[^14]: FieldNullValue
+[^13]: FieldNullValue
 
 Indicates the value to assign to the field in case of an empty value. Assign a default value if none is supplied in the NullValue.
 
 Once SpecifiedfEmpty is selected, additional controls appear in the below properties that allow you to optionally constrain the Overwrite further.
 
-AlwaysSpecified[^15]
+AlwaysSpecified[^14]
 
-[^15]: FieldValueDiscarded & FieldNullValue
+[^14]: FieldValueDiscarded & FieldNullValue
 
 Indicates the value always to assign to the field in case of an empty value. Assign a default value if none is supplied in the field itself.
 
