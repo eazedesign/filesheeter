@@ -376,9 +376,9 @@ Enabled if Output jobs are modified on the LayoutEditor.
 
 [^2]: Deleting Definitions
 
-    Deleting a definition is different than removing a definition from a project. When you remove a definition from a project, the reference to the definition is removed from the project, but the definition still exists in the database and thus may be a part of any other project. Deleting a definition, however, permanently removes the definition from the database. Any projects or other definitions that contains the deleted definition are affected.
+    Deleting a definition is different than removing a definition from a project. When you remove a definition from a project, the reference to the definition is removed from the project, but the definition still exists in the project and thus may be a part of any other project. Deleting a definition, however, permanently removes the definition from the database. Any projects or other definitions that contains the deleted definition are affected.
 
-    Before deleting a definition, you should find all references to that definition by running Find Definition References. For example, a field definition you want to delete may be referenced by both record and page definitions.
+    Before deleting a definition, you should find all references to that definition by running the Find command. For example, a field definition you want to delete may be referenced by both record and page definitions.
 
     including all expression.
 
