@@ -174,18 +174,6 @@ Table of Contents
 
 [7.1.13. PathFile](#pathfile)
 
-[7.2. Expression Function Format Example](#expression-function-format-example)
-
-[7.2.1. int 예제](#int-예제)
-
-[7.2.2. double 예제](#double-예제)
-
-[7.2.3. DateTime 예제](#datetime-예제)
-
-[7.2.4. 정렬](#정렬)
-
-[7.3. Q / A](#q--a)
-
 # FileSheeter
 
 ## Overview
@@ -986,7 +974,7 @@ A Plain File layout can describe data that is defined using delimiters, for exam
 
 **↵** 01 1st Record of the 1st Set
 
-**↵**   02 2nd Record of the 1st Set.
+**↵** 02 2nd Record of the 1st Set.
 
 **↵** 03 3rd Record of the 1st Set.
 
@@ -1078,7 +1066,7 @@ A sample file structure could be as follows (not all fields are defined for this
 
 **↵** 05 5th Record of the 1st Set.
 
-**↵**  06 6th Record of the 1st Set.
+**↵** 06 6th Record of the 1st Set.
 
 **↵** 07 1st Record of the 2nd Set.
 
@@ -1164,7 +1152,7 @@ Records are defined as HD record of which Classifier is equal to Required and Is
 
 **↵** 05 5th Record of the 1st Set.
 
-**↵**  06 6th Record of the 1st Set.
+**↵** 06 6th Record of the 1st Set.
 
 **↵** 07 1st Record of the 2nd Set.
 
@@ -1218,12 +1206,12 @@ Following jobs be referenced from an existing plain file layout: Join, Appending
 
 **CUSTOMER Record**
 
-| ID | FIRSTNAME | LASTNAME  |
-|----|-----------|-----------|
-| 1  | Paul      | Lee       |
-| 2  | David     | Jones     |
-| 3  | Lucas     | Smith     |
-| 4  | Sophia    | Davis     |
+| ID | FIRSTNAME | LASTNAME |
+|----|-----------|----------|
+| 1  | Paul      | Lee      |
+| 2  | David     | Jones    |
+| 3  | Lucas     | Smith    |
+| 4  | Sophia    | Davis    |
 
 **CUSTOMER_DETAIL Record**
 
@@ -1410,7 +1398,7 @@ In case Set Separator has configured that SetType is equal to Contain and String
 
 **↵** 05 5th Record of the 1st Set.
 
-**↵**  06 6th Record of the 1st Set.
+**↵** 06 6th Record of the 1st Set.
 
 **↵** 07 1st Record of the 2nd Set. Set Separator will return true.
 
@@ -1608,7 +1596,7 @@ Page Separator has configured that PagingType is equal to IsType and String is e
 
 **↵** 05 1st Page of the 1st Set. 1st Page of the sample.
 
-**↵**  06 2nd Page of the 1st Set. 2nd Page of the sample. Page Separator will return true.
+**↵** 06 2nd Page of the 1st Set. 2nd Page of the sample. Page Separator will return true.
 
 **↵** 07 1st Page of the 2nd Set. 3rd Page of the sample. Set Separator will return true.
 
@@ -1698,21 +1686,21 @@ The plain file layout of PlainFile jobs is referred to directly. The plain file 
 
 ![](media/79beb4ca1f9c1f37513527cdb08d3a2a.png)
 
-| ID | FIRSTNAME | LASTNAME  |
-|----|-----------|-----------|
-| 1  | Paul      | Lee       |
-| 2  | David     | Jones     |
-| 3  | Lucas     | Smith     |
-| 4  | Sophia    | Davis     |
+| ID | FIRSTNAME | LASTNAME |
+|----|-----------|----------|
+| 1  | Paul      | Lee      |
+| 2  | David     | Jones    |
+| 3  | Lucas     | Smith    |
+| 4  | Sophia    | Davis    |
 
 SELECT FROM CUSTOMER ORDER BY LASTNAME ASC
 
-| ID | FIRSTNAME | LASTNAME  |
-|----|-----------|-----------|
-| 4  | Sophia    | Davis     |
-| 2  | David     | Jones     |
-| 1  | Paul      | Lee       |
-| 3  | Lucas     | Smith     |
+| ID | FIRSTNAME | LASTNAME |
+|----|-----------|----------|
+| 4  | Sophia    | Davis    |
+| 2  | David     | Jones    |
+| 1  | Paul      | Lee      |
+| 3  | Lucas     | Smith    |
 
 ## Filter
 
@@ -1726,18 +1714,18 @@ You can use the FilterEditor to specify the FilterString property.
 
 The FilterEditor allows you to use an unlimited number of conditions and combine them with logical operators to create filter criteria. You can also switch to Text mode and type a filter string.
 
-| ID | FIRSTNAME | LASTNAME  |
-|----|-----------|-----------|
-| 1  | Paul      | Lee       |
-| 2  | David     | Jones     |
-| 3  | Lucas     | Smith     |
-| 4  | Sophia    | Davis     |
+| ID | FIRSTNAME | LASTNAME |
+|----|-----------|----------|
+| 1  | Paul      | Lee      |
+| 2  | David     | Jones    |
+| 3  | Lucas     | Smith    |
+| 4  | Sophia    | Davis    |
 
 SELECT FROM CUSTOMER WHERE ID = 25
 
-| ID | FIRSTNAME | LASTNAME  |
-|----|-----------|-----------|
-| 2  | David     | Jones     |
+| ID | FIRSTNAME | LASTNAME |
+|----|-----------|----------|
+| 2  | David     | Jones    |
 
 ## LeftJoin
 
@@ -1767,12 +1755,12 @@ One-to-many matching assumes that each record appears exactly once in each set o
 
 **CUSTOMER Record**
 
-| ID | FIRSTNAME | LASTNAME  |
-|----|-----------|-----------|
-| 1  | Paul      | Lee       |
-| 2  | David     | Jones     |
-| 3  | Lucas     | Smith     |
-| 4  | Sophia    | Davis     |
+| ID | FIRSTNAME | LASTNAME |
+|----|-----------|----------|
+| 1  | Paul      | Lee      |
+| 2  | David     | Jones    |
+| 3  | Lucas     | Smith    |
+| 4  | Sophia    | Davis    |
 
 **CUSTOMER_DETAIL Record**
 
@@ -1784,12 +1772,12 @@ One-to-many matching assumes that each record appears exactly once in each set o
 
 SELECT JOIN FROM CUSTOMER JOIN CUSTOMER_DETAIL ON CUSTOMER.ID = CUSTOMER_DETAIL.ID
 
-| ID | FIRSTNAME | LASTNAME  | PRODUCT | PRICE |
-|----|-----------|-----------|---------|-------|
-| 1  | Paul      | Lee       | A       | 10    |
-| 2  | David     | Jones     | B       | 20    |
-| 3  | Lucas     | Smith     | C       | 10    |
-| 4  | Sophia    | Davis     |         |       |
+| ID | FIRSTNAME | LASTNAME | PRODUCT | PRICE |
+|----|-----------|----------|---------|-------|
+| 1  | Paul      | Lee      | A       | 10    |
+| 2  | David     | Jones    | B       | 20    |
+| 3  | Lucas     | Smith    | C       | 10    |
+| 4  | Sophia    | Davis    |         |       |
 
 The table is all possible combinations where you can use a value of IsArray in each of two fields.
 
@@ -1812,12 +1800,12 @@ Appending is useful when you have relevant information stored in separate data s
 
 **CUSTOMER Record**
 
-| ID | FIRSTNAME | LASTNAME  |
-|----|-----------|-----------|
-| 1  | Paul      | Lee       |
-| 2  | David     | Jones     |
-| 3  | Lucas     | Smith     |
-| 4  | Sophia    | Davis     |
+| ID | FIRSTNAME | LASTNAME |
+|----|-----------|----------|
+| 1  | Paul      | Lee      |
+| 2  | David     | Jones    |
+| 3  | Lucas     | Smith    |
+| 4  | Sophia    | Davis    |
 
 **CUSTOMER_DETAIL Record**
 
@@ -1832,19 +1820,19 @@ Appending is useful when you have relevant information stored in separate data s
 
 SELECT JOIN FROM CUSTOMER JOIN CUSTOMER_DETAIL ON CUSTOMER.ID = CUSTOMER_DETAIL.ID
 
-| ID | FIRSTNAME | LASTNAME  |
-|----|-----------|-----------|
-| ID | PRODUCT   | PRICE     |
-| 1  | Paul      | Lee       |
-| 1  | A         | 10        |
-| 1  | D         | 20        |
-| 2  | David     | Jones     |
-| 2  | B         | 20        |
-| 2  | E         | 30        |
-| 3  | Lucas     | Smith     |
-| 3  | C         | 10        |
-| 3  | F         | 50        |
-| 4  | Sophia    | Davis     |
+| ID | FIRSTNAME | LASTNAME |
+|----|-----------|----------|
+| ID | PRODUCT   | PRICE    |
+| 1  | Paul      | Lee      |
+| 1  | A         | 10       |
+| 1  | D         | 20       |
+| 2  | David     | Jones    |
+| 2  | B         | 20       |
+| 2  | E         | 30       |
+| 3  | Lucas     | Smith    |
+| 3  | C         | 10       |
+| 3  | F         | 50       |
+| 4  | Sophia    | Davis    |
 
 ## Group
 
@@ -2628,24 +2616,24 @@ Built-in parameters during runtime are automatically populated and managed.
 
 Global parameters are variables that can be created by the user and exist in the runtime.
 
-| Category | Name                                                                                                                                                                                                               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Expression Definitions |                |       |
-|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|----------------|-------|
-|          |                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Decision               | Calculation    |       |
-|          |                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Record Selector        | Record         |       |
-|          |                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Set Separator          | Page Separator |       |
-|          |                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |                        |                | Field |
-| Project  | Project  FullName  Directory Arguments                                                                                                                                                                             | Return the name of a project.   Return the fullname of a project.   Return the only path of a project.  Return arguments entered from the command line.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | O                      | O              | O     |
-| Job      | Name  FilePath Filename Encoding                                                                                                                                                                                   | Return the name of a job.  Return the path of a file.  Return the name of a file.  Return the code page of a file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | O                      | O              | O     |
-| Input    | LastLine  Line  LineIndexInFile  LineCountInFile     HeaderText FooterText                                                                                                                                         | Return the string of the last line.   Return the string of the current line.   Returns a zero-based index of the current line in a file. Returns the total amount of lines in a file.  Returns the first string of a file.  Returns the last string before EOF.                                                                                                                                                                                                                                                                                                                                                                                                | O                      | X              | X     |
-| Common   | IsArray  Weight  PreviousType Type                                                                                                                                                                                 | Return whether the current row is repeated or not.  Return weight of the current line.  Return the name of the previous record.  Return the name of the current record.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | X                      | O              | O     |
-| Output   | NextType  SameTypeIndex SameTypeCount                                                                                                                                                                              | Return the name of the next record.  Return a zero-based index of the current record in the same records. Return the total amount of records in the same records.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | X                      | O              | O     |
-| File     | SubfileIndexInFile SetIndexInFile  SubsetIndexInFile  SheetIndexInFile  PageIndexInFile  RowIndexInFile    SubfileCountInFile SetCountInFile  SubsetCountInFile  SheetCountInFile  PageCountInFile  RowCountInFile | Returns a zero-based index of the current subfile in a file.  Returns a zero-based index of the current set in a file.  Returns a zero-based index of the current subset in a file.  Returns a zero-based index of the current sheet in a file.  Returns a zero-based index of the current page in a file.  Returns a zero-based index of the current row in a file.    Returns the total amount of subfiles in a file.  Returns the total amount of sets in a file.  Returns the total amount of subsets in a file.  Returns the total amount of sheets in a file.  Returns the total amount of pages in a file.  Returns the total amount of rows in a file. | X                      | O              | O     |
-| Subfile  | SetIndexInSubfile  SubsetIndexInSubfile SheetIndexInSubfile  PageIndexInSubfile  RowIndexInSubfile    SetCountInSubfile  SubsetCountInSubfile SheetCountInSubfile  PageCountInSubfile  RowCountInSubfile           | Returns a zero-based index of the current set in a subfile.  Returns a zero-based index of the current subset in a subfile.  Returns a zero-based index of the current sheet in a subfile.  Returns a zero-based index of the current page in a subfile.  Returns a zero-based index of the current row in a subfile.    Returns the total amount of sets in a subfile.  Returns the total amount of subsets in a subfile.  Returns the total amount of sheets in a subfile.  Returns the total amount of pages in a subfile.  Returns the total amount of rows in a subfile.                                                                                  | X                      | O              | O     |
-| Set      | SubsetIndexInSet SheetIndexInSet  PageIndexInSet  RowIndexInSet    SubsetCountInSet SheetCountInSet  PageCountInSet  RowCountInSet                                                                                 | Returns a zero-based index of the current subset in a set.  Returns a zero-based index of the current sheet in a set.  Returns a zero-based index of the current page in a set.  Returns a zero-based index of the current row in a set.    Returns the total amount of subsets in a set.  Returns the total amount of sheets in a set.  Returns the total amount of pages in a set.  Returns the total amount of rows in a set.                                                                                                                                                                                                                               | X                      | O              | O     |
-| Subset   | SheetIndexInSubset PageIndexInSubset  RowIndexInSubset    SheetCountInSubset PageCountInSubset  RowCountInSubset  MaxSheetsInSubset  MaxPagesInSheet                                                               | Returns a zero-based index of the current sheet in a subset.  Returns a zero-based index of the current page in a subset.   Returns a zero-based index of the current row in a subset.     Returns the total amount of sheets in a subset.   Returns the total amount of pages in a subset.   Returns the total amount of rows in a subset.   Return the available total amount of sheets in a subset.  Return the available total amount of pages in a sheet.                                                                                                                                                                                                 | X                      | O              | O     |
-| Sheet    | PageIndexInSheet RowIndexInSheet    PageCountInSheet RowCountInSheet                                                                                                                                               | Returns a zero-based index of the current page in a sheet.  Returns a zero-based index of the current row in a sheet.    Returns the total amount of pages in a sheet.  Returns the total amount of rows in a sheet.                                                                                                                                                                                                                                                                                                                                                                                                                                           | X                      | O              | O     |
-| Page     | RowIndexInPage RowCountInPage WeightedInPage IsOdd                                                                                                                                                                 | Returns a zero-based index of the current row in a page.  Returns the total amount of rows in a page.   Return the total amount of weights in a page. Return whether the current page is odd side.                                                                                                                                                                                                                                                                                                                                                                                                                                                             | X                      | O              | O     |
-| Global   | {Parameters}                                                                                                                                                                                                       | Return the value of the Parameter that contains a value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | X                      | X              | O     |
+| Category | Name                                                                                                                                                                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Expression Definitions |                |       |
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|----------------|-------|
+|          |                                                                                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Decision               | Calculation    |       |
+|          |                                                                                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Record Selector        | Record         |       |
+|          |                                                                                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Set Separator          | Page Separator |       |
+|          |                                                                                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                        |                | Field |
+| Project  | Project FullName Directory Arguments                                                                                                                                                                    | Return the name of a project. Return the fullname of a project. Return the only path of a project. Return arguments entered from the command line.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | O                      | O              | O     |
+| Job      | Name FilePath Filename Encoding                                                                                                                                                                         | Return the name of a job. Return the path of a file. Return the name of a file. Return the code page of a file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | O                      | O              | O     |
+| Input    | LastLine Line LineIndexInFile LineCountInFile HeaderText FooterText                                                                                                                                     | Return the string of the last line. Return the string of the current line. Returns a zero-based index of the current line in a file. Returns the total amount of lines in a file. Returns the first string of a file. Returns the last string before EOF.                                                                                                                                                                                                                                                                                                                                                                                         | O                      | X              | X     |
+| Common   | IsArray Weight PreviousType Type                                                                                                                                                                        | Return whether the current row is repeated or not. Return weight of the current line. Return the name of the previous record. Return the name of the current record.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | X                      | O              | O     |
+| Output   | NextType SameTypeIndex SameTypeCount                                                                                                                                                                    | Return the name of the next record. Return a zero-based index of the current record in the same records. Return the total amount of records in the same records.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | X                      | O              | O     |
+| File     | SubfileIndexInFile SetIndexInFile SubsetIndexInFile SheetIndexInFile PageIndexInFile RowIndexInFile SubfileCountInFile SetCountInFile SubsetCountInFile SheetCountInFile PageCountInFile RowCountInFile | Returns a zero-based index of the current subfile in a file. Returns a zero-based index of the current set in a file. Returns a zero-based index of the current subset in a file. Returns a zero-based index of the current sheet in a file. Returns a zero-based index of the current page in a file. Returns a zero-based index of the current row in a file. Returns the total amount of subfiles in a file. Returns the total amount of sets in a file. Returns the total amount of subsets in a file. Returns the total amount of sheets in a file. Returns the total amount of pages in a file. Returns the total amount of rows in a file. | X                      | O              | O     |
+| Subfile  | SetIndexInSubfile SubsetIndexInSubfile SheetIndexInSubfile PageIndexInSubfile RowIndexInSubfile SetCountInSubfile SubsetCountInSubfile SheetCountInSubfile PageCountInSubfile RowCountInSubfile         | Returns a zero-based index of the current set in a subfile. Returns a zero-based index of the current subset in a subfile. Returns a zero-based index of the current sheet in a subfile. Returns a zero-based index of the current page in a subfile. Returns a zero-based index of the current row in a subfile. Returns the total amount of sets in a subfile. Returns the total amount of subsets in a subfile. Returns the total amount of sheets in a subfile. Returns the total amount of pages in a subfile. Returns the total amount of rows in a subfile.                                                                                | X                      | O              | O     |
+| Set      | SubsetIndexInSet SheetIndexInSet PageIndexInSet RowIndexInSet SubsetCountInSet SheetCountInSet PageCountInSet RowCountInSet                                                                             | Returns a zero-based index of the current subset in a set. Returns a zero-based index of the current sheet in a set. Returns a zero-based index of the current page in a set. Returns a zero-based index of the current row in a set. Returns the total amount of subsets in a set. Returns the total amount of sheets in a set. Returns the total amount of pages in a set. Returns the total amount of rows in a set.                                                                                                                                                                                                                           | X                      | O              | O     |
+| Subset   | SheetIndexInSubset PageIndexInSubset RowIndexInSubset SheetCountInSubset PageCountInSubset RowCountInSubset MaxSheetsInSubset MaxPagesInSheet                                                           | Returns a zero-based index of the current sheet in a subset. Returns a zero-based index of the current page in a subset. Returns a zero-based index of the current row in a subset. Returns the total amount of sheets in a subset. Returns the total amount of pages in a subset. Returns the total amount of rows in a subset. Return the available total amount of sheets in a subset. Return the available total amount of pages in a sheet.                                                                                                                                                                                                  | X                      | O              | O     |
+| Sheet    | PageIndexInSheet RowIndexInSheet PageCountInSheet RowCountInSheet                                                                                                                                       | Returns a zero-based index of the current page in a sheet. Returns a zero-based index of the current row in a sheet. Returns the total amount of pages in a sheet. Returns the total amount of rows in a sheet.                                                                                                                                                                                                                                                                                                                                                                                                                                   | X                      | O              | O     |
+| Page     | RowIndexInPage RowCountInPage WeightedInPage IsOdd                                                                                                                                                      | Returns a zero-based index of the current row in a page. Returns the total amount of rows in a page. Return the total amount of weights in a page. Return whether the current page is odd side.                                                                                                                                                                                                                                                                                                                                                                                                                                                   | X                      | O              | O     |
+| Global   | {Parameters}                                                                                                                                                                                            | Return the value of the Parameter that contains a value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | X                      | X              | O     |
 
 ## Functions
 
@@ -2655,8 +2643,8 @@ For more details, refer to Criteria Language Syntax.
 
 ## Criteria Language Syntax
 
-| It features criteria language that you can use in FileSheeter for building expressions. The table below contains constants, operators, and functions you can use in expressions. Criteria Language Syntax, <https://docs.devexpress.com/>,  Copyright © 1998-2022 Developer Express Inc. All trademarks or registered trademarks are property of their respective owners |   |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
+| It features criteria language that you can use in FileSheeter for building expressions. The table below contains constants, operators, and functions you can use in expressions. Criteria Language Syntax, <https://docs.devexpress.com/>, Copyright © 1998-2022 Developer Express Inc. All trademarks or registered trademarks are property of their respective owners |   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
 
 ### Constant
 
@@ -2901,12 +2889,12 @@ Trim(), Len(), Substring(), IsNull()
 
 | **Format specifier**       | **Name**                 | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | **Examples**                                                                                                                                                                                                                                                                                                                                            |
 |----------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| "C"                        | Currency                 | Result: A currency value. Supported by: All numeric types. Precision specifier: Number of decimal digits. Default precision specifier: Defined by [NumberFormatInfo.CurrencyDecimalDigits](https://msdn.microsoft.com/en-us/library/system.globalization.numberformatinfo.currencydecimaldigits(v=vs.110).aspx).                                                                                                                                                                                                            |  123.456 (‘{0,0:C}’, CultureInfo= en-US) -\> \$123.46 123.456 (‘{0,0:C}’, CultureInfo=fr-FR) -\> 123,46 € 123.456 (‘{0,0:C}’, CultureInfo=ja-JP) -\> ¥123 -123.456 (‘{0,0:C3}’, CultureInfo=en-US) -\> (\$123.456) -123.456 (‘{0,0:C3}’, CultureInfo=fr-FR) -\> -123,456 € -123.456 (‘{0,0:C3}’, CultureInfo=ja-JP) -\> -¥123.456                       |
+| "C"                        | Currency                 | Result: A currency value. Supported by: All numeric types. Precision specifier: Number of decimal digits. Default precision specifier: Defined by [NumberFormatInfo.CurrencyDecimalDigits](https://msdn.microsoft.com/en-us/library/system.globalization.numberformatinfo.currencydecimaldigits(v=vs.110).aspx).                                                                                                                                                                                                            | 123.456 (‘{0,0:C}’, CultureInfo= en-US) -\> \$123.46 123.456 (‘{0,0:C}’, CultureInfo=fr-FR) -\> 123,46 € 123.456 (‘{0,0:C}’, CultureInfo=ja-JP) -\> ¥123 -123.456 (‘{0,0:C3}’, CultureInfo=en-US) -\> (\$123.456) -123.456 (‘{0,0:C3}’, CultureInfo=fr-FR) -\> -123,456 € -123.456 (‘{0,0:C3}’, CultureInfo=ja-JP) -\> -¥123.456                        |
 | "D"                        | Decimal                  | Result: Integer digits with optional negative sign. Supported by: Integral types only. Precision specifier: Minimum number of digits. Default precision specifier: Minimum number of digits required.                                                                                                                                                                                                                                                                                                                       | 1234 (‘{0: 0,0:D") -\> 1234 -1234 (‘{0,0:D6") -\> -001234                                                                                                                                                                                                                                                                                               |
 | "E"                        | Exponential (scientific) | Result: Exponential notation. Supported by: All numeric types. Precision specifier: Number of decimal digits. Default precision specifier: 6.                                                                                                                                                                                                                                                                                                                                                                               | 1052.0329112756 (‘{0,0:E}’, CultureInfo=en-US) -\> 1.052033E+003 1052.0329112756 (‘{0,0:e}’, CultureInfo=fr-FR) -\> 1,052033e+003 -1052.0329112756 (‘{0,0:e2}’, CultureInfo=en-US) -\> -1.05e+003 -1052.0329112756 (‘{0,0:E2}’, CultureInfo=fr_FR) -\> -1,05E+003                                                                                       |
 | "F"                        | Fixed-point              | Result: Integral and decimal digits with optional negative sign. Supported by: All numeric types. Precision specifier: Number of decimal digits. Default precision specifier: Defined by [NumberFormatInfo.NumberDecimalDigits](https://msdn.microsoft.com/en-us/library/system.globalization.numberformatinfo.numberdecimaldigits(v=vs.110).aspx).                                                                                                                                                                         | 1234.567 (‘{0,0:F}’, CultureInfo=en-US) -\> 1234.57 1234.567 (‘{0,0:F}’, CultureInfo=de-DE) -\> 1234,57 1234 (‘{0,0:F1}’, CultureInfo=en-US) -\> 1234.0 1234 (‘{0,0:F1}’, CultureInfo=de-DE) -\> 1234,0 -1234.56 (‘{0,0:F4}’, CultureInfo=en-US) -\> -1234.5600 -1234.56 (‘{0,0:F4}’, CultureInfo=de-DE) -\> -1234,5600                                 |
-| "G"                        | General                  | Result: The more compact of either fixed-point or scientific notation.  Supported by: All numeric types. Precision specifier: Number of significant digits. Default precision specifier: Depends on numeric type.                                                                                                                                                                                                                                                                                                           | -123.456 (‘{0,0:G}’, CultureInfo=en-US) -\> -123.456 -123.456 (‘{0,0:G}’, CultureInfo=sv-SE) -\> -123,456 123.4546 (‘{0,0:G4}’, CultureInfo=en-US) -\> 123.5 123.4546 (‘{0,0:G4}’, CultureInfo=sv-SE) -\> 123,5 -1.234567890e-25 (‘{0,0:G}’, CultureInfo=en-US) -\> -1.23456789E-25 -1.234567890e-25 (‘{0,0:G}’, CultureInfo=sv-SE) -\> -1,23456789E-25 |
-| "N"                        | Number                   | Result: Integral and decimal digits, group separators, and a decimal separator with optional negative sign. Supported by: All numeric types. Precision specifier: Desired number of decimal places. Default precision specifier: Defined by [NumberFormatInfo.NumberDecimalDigits](https://msdn.microsoft.com/en-us/library/system.globalization.numberformatinfo.numberdecimaldigits(v=vs.110).aspx).                                                                                                                      | 1234.567 (‘{0,0:N}’, CultureInfo=en-US) -\> 1,234.57 1234.567 (‘{0,0:N}’, CultureInfo=ru-RU) -\> 1 234,57  1234 (‘{0,0:N1}’, CultureInfo=en-US) -\> 1,234.0 1234 (‘{0,0:N1}’, CultureInfo=ru-RU) -\> 1 234,0 -1234.56 (‘{0,0:N3}’, CultureInfo=en-US) -\> -1,234.560 -1234.56 (‘{0,0:N3}’, CultureInfo=ru-RU) -\> -1 234,560                            |
+| "G"                        | General                  | Result: The more compact of either fixed-point or scientific notation. Supported by: All numeric types. Precision specifier: Number of significant digits. Default precision specifier: Depends on numeric type.                                                                                                                                                                                                                                                                                                            | -123.456 (‘{0,0:G}’, CultureInfo=en-US) -\> -123.456 -123.456 (‘{0,0:G}’, CultureInfo=sv-SE) -\> -123,456 123.4546 (‘{0,0:G4}’, CultureInfo=en-US) -\> 123.5 123.4546 (‘{0,0:G4}’, CultureInfo=sv-SE) -\> 123,5 -1.234567890e-25 (‘{0,0:G}’, CultureInfo=en-US) -\> -1.23456789E-25 -1.234567890e-25 (‘{0,0:G}’, CultureInfo=sv-SE) -\> -1,23456789E-25 |
+| "N"                        | Number                   | Result: Integral and decimal digits, group separators, and a decimal separator with optional negative sign. Supported by: All numeric types. Precision specifier: Desired number of decimal places. Default precision specifier: Defined by [NumberFormatInfo.NumberDecimalDigits](https://msdn.microsoft.com/en-us/library/system.globalization.numberformatinfo.numberdecimaldigits(v=vs.110).aspx).                                                                                                                      | 1234.567 (‘{0,0:N}’, CultureInfo=en-US) -\> 1,234.57 1234.567 (‘{0,0:N}’, CultureInfo=ru-RU) -\> 1 234,57 1234 (‘{0,0:N1}’, CultureInfo=en-US) -\> 1,234.0 1234 (‘{0,0:N1}’, CultureInfo=ru-RU) -\> 1 234,0 -1234.56 (‘{0,0:N3}’, CultureInfo=en-US) -\> -1,234.560 -1234.56 (‘{0,0:N3}’, CultureInfo=ru-RU) -\> -1 234,560                             |
 | "P"                        | Percent                  | Result: Number multiplied by 100 and displayed with a percent symbol. Supported by: All numeric types. Precision specifier: Desired number of decimal places. Default precision specifier: Defined by [NumberFormatInfo.PercentDecimalDigits](https://msdn.microsoft.com/en-us/library/system.globalization.numberformatinfo.percentdecimaldigits(v=vs.110).aspx).                                                                                                                                                          | 1 (‘{0,0:P}’, CultureInfo=en-US) -\> 100.00 % 1 (‘{0,0:P}’, CultureInfo=fr-FR) -\> 100,00 % -0.39678 (‘{0,0:P1}’, CultureInfo=en-US) -\> -39.7 % -0.39678 (‘{0,0:P1}’, CultureInfo=fr-FR) -\> -39,7 %                                                                                                                                                   |
 | "R"                        | Round-trip               | Result: A string that can round-trip to an identical number. Supported by: [Single](https://msdn.microsoft.com/en-us/library/system.single(v=vs.110).aspx), [Double](https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx), and [BigInteger](https://msdn.microsoft.com/en-us/library/system.numerics.biginteger(v=vs.110).aspx). Precision specifier: Ignored. More information: [The Round-trip ("R") Format Specifier](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx#RFormatString). | 123456789.12345678 (‘{0,0:R}) -\> 123456789.12345678 -1234567890.12345678 (‘{0,0:R}) -\> -1234567890.1234567                                                                                                                                                                                                                                            |
 | "X" or "x"                 | Hexadecimal              | Result: A hexadecimal string. Supported by: Integral types only. Precision specifier: Number of digits in the result string.                                                                                                                                                                                                                                                                                                                                                                                                | 255 (‘{0,0:X}) -\> FF -1 (‘{0,0:x}) -\> ff 255 (‘{0,0:x4}) -\> 00ff -1 (‘{0,0:X4}) -\> 00FF                                                                                                                                                                                                                                                             |
@@ -2953,346 +2941,4 @@ Trim(), Len(), Substring(), IsNull()
 | PathGetFileName                 | Represents the Boolean True value.                                        | C:\\Windows\\File.txt -\>File.txt    |
 | PathGetFilenameWithoutExtension | Returns the file name of the specified path string without the extension. | C:\\Windows\\File.txt -\>File        |
 
-## Expression Function Format Example
-
-형식 문자열 작성 함수
-
-형식 문자열(%s, %d 등과 같은)을 지정할 때는 순서대로 인덱스 {0} {1} {2}까지 지원
-
-서식 지정자는 아래와 같고, [ ]은 생략 가능한 부분
-
-{ 인덱스 번호 [, 정렬 방식] [:서식 지정자] }
-
-출력에 사용하는 파일이 2바이트 문자가 포함된 경우, 출력너비를 지정하는 함수는 PadLeftB, PadRightB함수를 사용한다. 숫자의 경우는 Format함수를 사용한다.
-
-### int 예제
-
-Add zeroes before number
-
-Format(‘{0:00000}’, 15); // "00015"
-
-Format(‘{0:00000}’, -15); // "-00015"
-
-Align number to the right or left
-
-Format(‘{0,5}’, 15); // " 15"
-
-Format(‘{0,-5}’, 15); // "15 "
-
-Format(‘{0,5:000}’, 15); // " 015"
-
-Format(‘{0,-5:000}’, 15); // "015 "
-
-Different formatting for negative numbers and zero
-
-Format(‘{0:\#;minus \#}’, 15); // "15"
-
-Format(‘{0:\#;minus \#}’, -15); // "minus 15"
-
-Format(‘{0:\#;minus \#;zero}’, 0); // "zero"
-
-Custom number formatting (e.g. phone number)
-
-Format(‘{0:+\#\#\# \#\#\# \#\#\# \#\#\#}’, 447900123456); // "+447 900 123 456"
-
-Format(‘{0:\#\#-\#\#\#\#-\#\#\#\#}’, 8958712551); // "89-5871-2551"
-
-### double 예제
-
-Digits after decimal point
-
-// just two decimal places
-
-Format(‘{0:0.00}’, 123.4567); // "123.46"
-
-Format(‘{0:0.00}’, 123.4); // "123.40"
-
-Format(‘{0:0.00}’, 123.0); // "123.00"
-
-// max. two decimal places
-
-Format(‘{0:0.\#\#}’, 123.4567); // "123.46"
-
-Format(‘{0:0.\#\#}’, 123.4); // "123.4"
-
-Format(‘{0:0.\#\#}’, 123.0); // "123"
-
-Digits before decimal point
-
-// at least two digits before decimal point
-
-Format(‘{0:00.0}’, 123.4567); // "123.5"
-
-Format(‘{0:00.0}’, 23.4567); // "23.5"
-
-Format(‘{0:00.0}’, 3.4567); // "03.5"
-
-Format(‘{0:00.0}’, -3.4567); // "-03.5"
-
-Thousands separator
-
-Format(‘{0:0,0.0}’, 12345.67); // "12,345.7"
-
-Format(‘{0:0,0}’, 12345.67); // "12,346"
-
-Zero
-
-Format(‘{0:0.0}’, 0.0); // "0.0"
-
-Format(‘{0:0.\#}’, 0.0); // "0"
-
-Format(‘{0:\#.0}’, 0.0); // ".0"
-
-Format(‘{0:\#.\#}’, 0.0); // ""
-
-Align numbers with spaces
-
-Format(‘{0,10:0.0}’, 123.4567); // " 123.5"
-
-Format(‘{0,-10:0.0}’, 123.4567); // "123.5 "
-
-Format(‘{0,10:0.0}’, -123.4567); // " -123.5"
-
-Format(‘{0,-10:0.0}’, -123.4567); // "-123.5 "
-
-Custom formatting for negative numbers and zero
-
-Format(‘{0:0.00;minus 0.00;zero}’, 123.4567); // "123.46"
-
-Format(‘{0:0.00;minus 0.00;zero}’, -123.4567); // "minus 123.46"
-
-Format(‘{0:0.00;minus 0.00;zero}’, 0.0); // "zero"
-
-Some funny examples
-
-Format(‘{0:my number is 0.0}’, 12.3); // "my number is 12.3"
-
-Format(‘{0:0aaa.bbb0}’, 12.3); // "12aaa.bbb3"
-
-### DateTime 예제
-
-Custom DateTime Formatting
-
-// create date time 2008-03-09 16:05:07.123
-
-DateTime dt = new DateTime(2008, 3, 9, 16, 5, 7, 123);
-
-Format(‘{0:y yy yyy yyyy}’, dt); // "8 08 008 2008" year
-
-Format(‘{0:M MM MMM MMMM}’, dt); // "3 03 Mar March" month
-
-Format(‘{0:d dd ddd dddd}’, dt); // "9 09 Sun Sunday" day
-
-Format(‘{0:h hh H HH}’, dt); // "4 04 16 16" hour 12/24
-
-Format(‘{0:m mm}’, dt); // "5 05" minute
-
-Format(‘{0:s ss}’, dt); // "7 07" second
-
-Format(‘{0:f ff fff ffff}’, dt); // "1 12 123 1230" sec.fraction
-
-Format(‘{0:F FF FFF FFFF}’, dt); // "1 12 123 123" without zeroes
-
-Format(‘{0:t tt}’, dt); // "P PM" A.M. or P.M.
-
-Format(‘{0:z zz zzz}’, dt); // "-6 -06 -06:00" time zone
-
-// date separator in german culture is ‘.’ (so "/" changes to ".")
-
-Format(‘{0:d/M/yyyy HH:mm:ss}’, dt); // "9/3/2008 16:05:07" - english (en-US)
-
-Format(‘{0:d/M/yyyy HH:mm:ss}’, dt); // "9.3.2008 16:05:07" - german (de-DE)
-
-// month/day numbers without/with leading zeroes
-
-Format(‘{0:M/d/yyyy}’, dt); // "3/9/2008"
-
-Format(‘{0:MM/dd/yyyy}’, dt); // "03/09/2008"
-
-// day/month names
-
-Format(‘{0:ddd, MMM d, yyyy}’, dt); // "Sun, Mar 9, 2008"
-
-Format(‘{0:dddd, MMMM d, yyyy}’, dt); // "Sunday, March 9, 2008"
-
-// two/four digit year
-
-Format(‘{0:MM/dd/yy}’, dt); // "03/09/08"
-
-Format(‘{0:MM/dd/yyyy}’, dt); // "03/09/2008"
-
-Standard DateTime Formatting
-
-Format(‘{0:t}’, dt); // "4:05 PM" ShortTime
-
-Format(‘{0:d}’, dt); // "3/9/2008" ShortDate
-
-Format(‘{0:T}’, dt); // "4:05:07 PM" LongTime
-
-Format(‘{0:D}’, dt); // "Sunday, March 09, 2008" LongDate
-
-Format(‘{0:f}’, dt); // "Sunday, March 09, 2008 4:05 PM" LongDate+ShortTime
-
-Format(‘{0:F}’, dt); // "Sunday, March 09, 2008 4:05:07 PM" FullDateTime
-
-Format(‘{0:g}’, dt); // "3/9/2008 4:05 PM" ShortDate+ShortTime
-
-Format(‘{0:G}’, dt); // "3/9/2008 4:05:07 PM" ShortDate+LongTime
-
-Format(‘{0:m}’, dt); // "March 09" MonthDay
-
-Format(‘{0:y}’, dt); // "March, 2008" YearMonth
-
-Format(‘{0:r}’, dt); // "Sun, 09 Mar 2008 16:05:07 GMT" RFC1123
-
-Format(‘{0:s}’, dt); // "2008-03-09T16:05:07" SortableDateTime
-
-Format(‘{0:u}’, dt); // "2008-03-09 16:05:07Z" UniversalSortableDateTime
-
-### 정렬
-
-Format(‘{0,10:0}’, 123); //” 123”
-
-Format(‘{0,10:0}’, 1234); //” 1234”
-
-Format(‘{0,10:0}’, 12345); //” 12345”
-
-Format(‘{0,10:0}’, 123456); //” 123456”
-
-Format(‘{0,-10:0}’, 123); //”123 ”
-
-Format(‘{0,-10:0}’, 1234); //”1234 ”
-
-Format(‘{0,-10:0}’, 12345); //”12345 ”
-
-Format(‘{0,-10:0}’, 123456); //”123456 ”
-
-## Q / A
-
-값을 비교하는 경우 ‘==’연산자를 사용합니다
-
-field가 공백인 경우 숫자로 변환 시 논리적 오류가 발생하므로 ‘[필드명] + 0’과 같이 연산을 하면 자동 형변환되어 숫자로 사용 가능합니다
-
-\*\*\* SaveAndContinue일 경우, 전체 파일을 처리하므로 경고 메시지가 무한 반복되므로 File Condition에서 오류 검출 방식을 ThrowException으로 설정 후 사용
-
-\*\*\* 필드명에 공백을 중간에 포함하고 있으면 오류(끝에 공백은 오류 아님)
-
-To begin execution from the command line, enter the program name FileSheeter followed by either actual specifications, a job specification file, or a combination of both.
-
-**To use the Flat File Wizard**:
-
-1.  From the Studio menus select **Project** \> **Flat File Wizard.** The Flat File Wizard opens in a tab in the Studio workspace.
-2.  Enter sample data into the **Sample Data** text box or click **Browse...** to load a sample file.
-3.  Click **Next \>**. The File Format page opens.
-4.  Choose one of the file format options:
-    -   **Character-delimited format (including Comma Separated Values format)** - Choose this option when each line in the file has a record with fields separated by a single character, such as a comma or tab.
-    -   **This file is in another format** - Choose this option when your file does not meet the criteria of the previous file format option. If you select this option, you cannot use the Flat File Wizard to create a schema for your flat file.
-5.  Click **Next \>**. The Field Delimiters page opens.
-6.  Select a field separator from the **Fields separated by** list. If you select **Other:**, specify the field separator in the field that displays to the right.
-7.  If the field is enclosed by a specific character, select the character that encloses the field from the **Fields enclosed by** list. If you select **Other:**, specify the enclosing character in the field that displays to the right.
-8.  Click **Next \>**. The Header & Trailer page opens
-9.  Specify whether header and trailer rows exist:
-    -   Select **Treat first row as header for field names**, if a header row exists.
-    -   Select **Treat last \_\_ row(s) as trailer**, if a trailer row exists and specify the row number.
-10. Click **Next \>**. The Edit Schema Name page opens.
-11. Enter a schema name.
-
-    **Tip:** Choose a schema name that describes the data and file format.
-
-12. Click **Finish**. In the **Project** tab of the Studio Toolbox, the flat file schema you just created displays in the **Flat File Schemas** directory.
-
-**To read the flat file you created and convert it to XML:**
-
-1.  Add the **Read Flat File** activity to an orchestration.
-2.  In the **Checklist**, select **Configure**. The Configure pane opens.
-3.  In the **Select a Flat File Schema** field, specify the name of the flat file schema you have created.
-
-**To convert XML data to a flat file:**
-
-1.  Add the **Write Flat File** activity to an orchestration.
-2.  In the **Checklist**, select **Configure**. The Configure pane opens.
-3.  In the **Select a Flat File Schema** field, specify the name of the flat file schema you have created.
-
-![](media/3efa488bb57de395a95808b61c39a4c6.png)
-
-Click New Project in File Menu
-
-![](media/ddb0647eb5fd8b08816c8eeff31ff967.png)
-
-If same project exists in the project folder, OK button be disabled.
-
-![](media/06e036a87776f007509405103490a091.png)
-
-![](media/4528672c26668ca260e2c9047ddb62b8.png)
-
-The project be opened.
-
-![](media/b6888c24773034eec9c3b7de5bdd424e.png)
-
-After click Plain Command, Job Wizard Window appear
-
-![](media/b3893e703a14bb4c9a68e76fd95cc9d3.png)
-
-![](media/f662f4d4c52bac7924ab49a9bd537465.png)
-
-![](media/29bbaeb4cd4830301a8c159710d45099.png)
-
-![](media/fae9199c44e1e650239cacee3e0e9035.png)
-
-![](media/bd27cac4e9dd5c319267e40f9d2a0eee.png)
-
-![](media/365c6ee2f500d14ca92aac6943df8a66.png)
-
-![](media/7f36c8d371744d9ecc7799e270ba2130.png)
-
-To implement a Palin File layout for this sample data with record IDs, you would map each characteristic of the data as shown in the following table:
-
-Click Add Command in Record Ribbon Group. Change the Name from ‘YourRecordClass’ to ‘HD’.
-
-![](media/9cdbcee797fa0a446cc2263b55a1d371.png)
-
-![](media/4420a5a0f96646f33bcacd6930e08584.png)
-
-![](media/bcb78d125f55095ae5023e3bfbc63626.png)
-
-![](media/8e8263eea59e6dea190934242382e3ff.png)
-
-Field3 Optional
-
-![](media/ffb4e1e0d18d444871ea432e110eb79f.png)
-
-Enter the name as ‘LD’ then select IsArray.
-
-![](media/de7fcc0bc9c06348740181e6a770de75.png)
-
-![](media/800eb87dcd47888d65ad5f6fee8b81b5.png)
-
-![](media/2f977c77f7d314404b716f458c1443dd.png)
-
-Enter the name as ‘TD’ then select IsArray.
-
-![](media/bfeec8e8053c080fdc7a25e9102fa035.png)
-
-![](media/68972c939d0a7ec0197da85639eed8e4.png)
-
-![](media/683551a0f79524106133c672941547b7.png)
-
-![](media/4fb692c445d469afd6f9d7d3f3c4b16f.png)
-
-![](media/9d38a3997badc52bf6556c667c429d5f.png)
-
-Click Add Command in Task Ribbon. Appear Task Popup Window.
-
-![](media/d67e5317b0862291a75595436ddab338.png)
-
-![](media/dd99b64051694edad64d33775c96d284.png)
-
-Click Save in File Menu.
-
-![](media/865bc9b2e1f3858ac987b6756a41edb2.png)
-
-![](media/2533aa5bb9ee6729e0b829436a05affe.png)
-
-![](media/0908aeeb84b5c7c4efc02b37faef0497.png)
-
-![](media/845da4f1862ec1b9c2dbf809af9b6499.png)
+## 
