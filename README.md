@@ -1260,57 +1260,9 @@ The set definition is defined using the Set Separator in the job definition, whi
 
 Defining a set that begins with the first record of a sequence of records with the same relationship like set Ids and ends in the previous record of another first record: The criteria for finding a series of records is called the Set Separator.
 
-In case Set Separator has configured that SetType is equal to Contain and String is equal to HD.![](media/094cd8d5ac3fa434b01270737f92ac68.png)
+In case Set Separator has configured that SetType is equal to Contain and String is equal to HD.
 
-**↵** 01 1st Record of the 1st Set.
-
-**↵** 02 2nd Record of the 1st Set.
-
-**↵** 03 3rd Record of the 1st Set.
-
-**↵** 04 4th Record of the 1st Set.
-
-**↵** 05 5th Record of the 1st Set.
-
-**↵**  06 6th Record of the 1st Set.
-
-**↵** 07 1st Record of the 2nd Set. Set Separator will return true.
-
-**↵** 08 2nd Record of the 2nd Set.
-
-**↵** 09 3rd Record of the 2nd Set.
-
-**↵** 10 4th Record of the 2nd Set.
-
-**↵** 11 5th Record of the 2nd Set.
-
-**↵** 12 6th Record of the 2nd Set.
-
-**↵** 13 7th Record of the 2nd Set.
-
-**↵** 14 1st Record of the 3rd Set. Set Separator will return true.
-
-**↵** 15 2nd Record of the 3rd Set.
-
-**↵** 16 3rd Record of the 3rd Set.
-
-**↵** 17 4th Record of the 3rd Set.
-
-**↵** 18 5th Record of the 3rd Set.
-
-**↵** 19 6th Record of the 3rd Set.
-
-**↵** 20 1st Record of the 4th Set. Set Separator will return true.
-
-**↵** 21 2nd Record of the 4th Set.
-
-**↵** 22 3rd Record of the 4th Set.
-
-**↵** 23 4th Record of the 4th Set.
-
-**↵** 24 5th Record of the 4th Set.
-
-**↵** 25 6th Record of the 4th Set.
+![](media/2a972b33bf12c897eb9ac3efdd882ee5.png)
 
 You can specify the first record in a plain file layout when creating a plain file layout. The first record is used to determine the beginning record of a set when the PlainFile Job finds a match between the flat file and the plain file layout.
 
@@ -1460,55 +1412,7 @@ In the case of Set Separator has been configured that Type is equal to Contain a
 
 Page Separator has configured that PagingType is equal to IsType and String is equal to TD.
 
-![](media/094cd8d5ac3fa434b01270737f92ac68.png)**↵** 01 1st Page of the 1st Set. 1st Page of the sample.
-
-**↵** 02 1st Page of the 1st Set. 1st Page of the sample.
-
-**↵** 03 1st Page of the 1st Set. 1st Page of the sample.
-
-**↵** 04 1st Page of the 1st Set. 1st Page of the sample.
-
-**↵** 05 1st Page of the 1st Set. 1st Page of the sample.
-
-**↵**  06 2nd Page of the 1st Set. 2nd Page of the sample. Page Separator will return true.
-
-**↵** 07 1st Page of the 2nd Set. 3rd Page of the sample. Set Separator will return true.
-
-**↵** 08 1st Page of the 2nd Set. 3rd Page of the sample.
-
-**↵** 09 1st Page of the 2nd Set. 3rd Page of the sample.
-
-**↵** 10 1st Page of the 2nd Set. 3rd Page of the sample.
-
-**↵** 11 1st Page of the 2nd Set. 3rd Page of the sample.
-
-**↵** 12 1st Page of the 2nd Set. 3rd Page of the sample.
-
-**↵** 13 1st Page of the 2nd Set. 3rd Page of the sample.
-
-**↵** 14 1st Page of the 3rd Set. 4th Page of the sample. Set Separator will return true.
-
-**↵** 15 1st Page of the 3rd Set. 4th Page of the sample.
-
-**↵** 16 1st Page of the 3rd Set. 4th Page of the sample.
-
-**↵** 17 1st Page of the 3rd Set. 4th Page of the sample.
-
-**↵** 18 1st Page of the 3rd Set. 4th Page of the sample.
-
-**↵** 19 2nd Page of the 3rd Set. 5th Page of the sample. Page Separator will return true.
-
-**↵** 20 1st Page of the 4th Set. 6th Page of the sample. Set Separator will return true.
-
-**↵** 21 1st Page of the 4th Set. 6th Page of the sample.
-
-**↵** 22 1st Page of the 4th Set. 6th Page of the sample.
-
-**↵** 23 1st Page of the 4th Set. 6th Page of the sample.
-
-**↵** 24 1st Page of the 4th Set. 6th Page of the sample.
-
-**↵** 25 1st Page of the 4th Set. 6th Page of the sample.
+![](media/bf8125044596c6fe5a426c749338937f.png)
 
 For example, the weight of each record in a set can be calculated for separating into logical pages.
 
