@@ -1614,7 +1614,6 @@ SELECT JOIN FROM CUSTOMER JOIN CUSTOMER_DETAIL ON CUSTOMER.ID = CUSTOMER_DETAIL.
 
 ## Group
 
-When preparing data for analysis, you may need to divide a dataset into separate pieces.
 
 The Group Job acts as a partition of a dataset: it separates the cases in a dataset into two or more new datasets. When splitting a dataset, you will have two or more datasets as a result.
 
