@@ -226,7 +226,7 @@ Design multiple record layouts in one or more files
 
 Transform between plain and personalized data.
 
-Select, join, sort, aggregate, calculate, convert, and re-format
+Select, join, sort, filter, aggregate, calculate, convert, and re-format
 
 Translate EBCDIC to ASCII fields, MBCS(like CJK) to Unicode, etc.
 
@@ -238,11 +238,13 @@ Only use certain fields on the output
 
 Create multiple output files, and formats, from a single input format
 
-Also, supports select, join, sort, aggregate, calculate, convert, and re-format.
+Also, supports select, join, sort, filter, aggregate, calculate, convert, and re-format.
 
 Select via record selector that conditional include also predefined condition
 
 Sort multiple numbers of keys in fields, custom sort, 2GB over within available memory
+
+Filter subset using criteria
 
 Join match syntax 1-1, n-1, inner & outer like SQL.
 
