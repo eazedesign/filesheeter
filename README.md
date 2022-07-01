@@ -1989,7 +1989,7 @@ The records can contain more or less chars in the last field
 
 **-Delimiter Type**[^10]
 
-[^10]: If Delimiter Type is equals to None, Output jobs erase all delimiters and write only values like FixedLength.
+[^10]: If the Delimiter Type is equals to None, Output jobs erase all delimiters and write only values like FixedLength.
 
 Indicates a delimiter character that separates the record into fields. Select one of the following types.
 
