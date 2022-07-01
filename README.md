@@ -116,7 +116,7 @@ Table of Contents
 
 [5.2. Record Popup Window](#record-popup-window)
 
-[5.2.1. Specifying a Record Identifier using Record Selector](#specifying-a-record-identifier-using-record-selector)
+[5.2.1. Specifying Record Identifier using Record Selector](#specifying-a-record-identifier-using-record-selector)
 
 [5.2.2. Specifying Optional Fields](#specifying-optional-fields)
 
@@ -1883,7 +1883,7 @@ Enclose each field with the specified quotation marks
 
 Some properties of a field are only edited in the properties pane of the field.
 
-### Specifying a Record Identifier using Record Selector
+### Specifying Record Identifier using Record Selector
 
 These records are identified by whatever criteria you select.
 
