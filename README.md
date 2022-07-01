@@ -184,7 +184,13 @@ Flat files (including spreadsheets) are great for quick data entry by users, man
 
 FileSheeter provides logical file manipulation for files. You can view and edit or otherwise process flat file types and can respond efficiently to files for businesses that need to be created, increased, modified, and changed constantly. As a result, it reduces lead time for file processing and optimizes maintenance costs.
 
-Easy UI to edit a big file (also CJK characters) using FileHelpers, NPOI.
+Easy UI to edit a big file (also CJK characters) using FileHelpers, NPOI[^1]:.
+
+
+[^2]: Deleting Definitions
+
+    https://www.filehelpers.net/ Copyright © 2020 Devoo - Marcos Meli All rights reserved. https://github.com/nissl-lab/npoi
+    
 
 Just click to edit a transaction file that consists of records. FileSheeter is the data migration tool that has the performance and simplicity of its large volume data definition and reformatting. The formula helps handle more complex business rules. UI supports editing metadata and formula that can modify files.
 
@@ -359,7 +365,7 @@ Once you select Edit \> Find, FileSheeter locates the specified string. When a m
 ![](media/116e13f5b3aed7d06357c0ff052e7f61.png)
 
 \-Option: Show the Options panel.
-
+ 
 **FindCondition**
 
 Select one of the following types. Contains, StartsWith, Like, Equals(default).
