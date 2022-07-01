@@ -208,11 +208,7 @@ In addition to the GUI, FileSheeter provides:
 
 • Export a new file of data.
 
-FileSheeter is a utility for converting files into different formats, and/or translating field[^1]-level data into other types.
-
-[^1]: https://en.wikipedia.org/wiki/Column_(database)
-
-    The word 'field' is normally used interchangeably with 'column'.[5] However, database perfectionists tend to favor using 'field' to signify a specific cell of a given row.[citation needed] This is to enable accuracy in communicating with other developers. Columns (really column names) being referred to as field names (common for each row/record in the table). Then a field refers to a single storage location in a specific record (like a cell) to store one value (the field value). The terms record and field come from the more practical field of database usage and traditional DBMS system usage (This was linked into business like terms used in manual databases e.g. filing cabinet storage with records for each customer). The terms row and column come from the more theoretical study of relational theory.
+FileSheeter is a utility for converting files into different formats, and/or translating field-level data into other types.
 
 FileSheeter is a quick and easy way to:
 
