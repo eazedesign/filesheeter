@@ -187,7 +187,7 @@ FileSheeter provides logical file manipulation for files. You can view and edit 
 Easy UI to edit a big file (also CJK characters) using FileHelpers, NPOI[^1]:.
 
 
-[^2]: Deleting Definitions
+[^1]: Deleting Definitions
 
     https://www.filehelpers.net/ Copyright © 2020 Devoo - Marcos Meli All rights reserved. https://github.com/nissl-lab/npoi
     
@@ -248,7 +248,7 @@ Sort multiple numbers of keys in fields, custom sort, 2GB over within available 
 
 Filter subset using criteria
 
-Join match syntax 1-1, n-1, inner & outer like SQL.
+Join match syntax 1-1, n-1.
 
 Append Place other records below a record
 
@@ -264,15 +264,15 @@ Report paging, multiple output formats
 
 ## Requirements
 
-The runtime environment is Windows 10 64bit x64
+The runtime environment is Windows 10 64bit x64.
 
 Enough free memory on a running system should be 4 times greater than the size of an input file.
 
-recommend highly CPU is 64bit 2GHz and ram is over 16g.,
+recommend highly CPU is 64bit 2GHz and ram is over 16g.
 
-Net Framework requirements
+.Net Framework requirements:
 
-net framework 4.6.1 or above required
+.Net framework 4.6.1 or above required.
 
 # User Interface
 
