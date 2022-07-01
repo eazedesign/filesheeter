@@ -178,9 +178,9 @@ Table of Contents
 
 ## Overview
 
-Data Manipulation Software
-
 Flat files (including spreadsheets) are great for quick data entry by users, manipulating numerical data for fast analysis, and having rich formatting features and mathematical functions for small to moderate data sets.
+
+Data Manipulation Software:
 
 FileSheeter provides logical file manipulation for files. You can view and edit or otherwise process flat file types and can respond efficiently to files for businesses that need to be created, increased, modified, and changed constantly. As a result, it reduces lead time for file processing and optimizes maintenance costs.
 
