@@ -187,9 +187,10 @@ FileSheeter provides logical file manipulation for files. You can view and edit 
 Easy UI to edit a big file (also CJK characters) using FileHelpers, NPOI[^1]:.
 
 
-[^1]: Deleting Definitions
+[^1]: FileHelpers, NPOI
 
-    https://www.filehelpers.net/ Copyright © 2020 Devoo - Marcos Meli All rights reserved. https://github.com/nissl-lab/npoi
+    https://www.filehelpers.net/ Copyright © 2020 Devoo - Marcos Meli All rights reserved. 
+    https://github.com/nissl-lab/npoi
     
 
 Just click to edit a transaction file that consists of records. FileSheeter is the data migration tool that has the performance and simplicity of its large volume data definition and reformatting. The formula helps handle more complex business rules. UI supports editing metadata and formula that can modify files.
