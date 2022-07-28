@@ -817,7 +817,7 @@ Task Tab
 
 **-Path**
 
-\-**Name**: The filename of a project file.
+\-**Name**: Default is ‘New Task’.
 
 **-Description**
 
